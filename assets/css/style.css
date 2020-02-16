@@ -86,9 +86,10 @@ hr {
 
 .lbl-todo-count
 {
-  height:1.9rem;
+  height:2.1rem;
   font-size:1rem;
   background-color:seagreen;
+  padding-top:2%;
 }
 
 .p-delete
