@@ -1,0 +1,150 @@
+/*
+* {
+  outline: solid 1px red;
+}
+*/
+
+#bg-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#todo-error {
+  color: red;
+  font-size: 2em;
+}
+
+body, html {
+  height: 100%;
+}
+
+.btn-add-todo {
+  background-color: silver;
+  height: 3.7vh;
+  font-weight: bold;
+  margin-top: -1vh;
+}
+
+.btn-add-todo:hover
+{
+  background-color:rgb(11, 238, 11);
+}
+
+.btn-delete
+{
+  background-color:darkred;
+  color:silver;
+
+}
+
+.card-style
+{
+
+  border:solid black;
+  width:39vw;
+  background-color:black;
+  
+}
+
+.fieldset-todos {
+  width: 80vh;
+  height: 15vh;
+  margin-bottom:-2vh;
+
+  background-color: black;
+  color: silver;
+  border: solid 2px black;
+}
+
+.header-style {
+  background-color: gold;
+}
+
+hr {
+  border: solid 1px silver;
+}
+
+.ipt-todo {
+  background-color: gold;
+  width: 20vw;
+}
+
+.ipt-todo-count
+{
+  text-align:center;
+  width:4vw;
+  background-color:silver;
+  color:black;
+}
+
+
+.lbl-add-todo {
+  width: 40vw;
+  font-weight: bold;
+}
+
+.lbl-todo-count
+{
+  height:1.9rem;
+  font-size:1rem;
+  background-color:seagreen;
+}
+
+.p-delete
+{
+  width:5vw;
+}
+
+.p-fieldset {
+  display: flex;
+  justify-content: center;
+}
+
+.p-quote {
+  display: flex;
+  justify-content: left;
+  font-weight: bold;
+  color: red;
+  margin-top: 2vh;
+  margin-left: 2vw;
+}
+
+.p-time {
+  display: flex;
+  justify-content: left;
+  font-weight: bolder;
+  color: red;
+  margin-top: 2vh;
+  margin-left: 2vw;
+  font-size: 1.5rem;
+}
+
+.p-todo-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.p-todo-list {
+  margin-left:0;
+  background-color: black;
+  width: 39vw;
+  color: silver;
+}
+
+.p-todos {
+  display: flex;
+  justify-content: center;
+  margin-top: 1vh;
+  font-size: 1.2rem;
+  font-weight: bold;
+  
+}
+
+.p-weather {
+  display: flex;
+  justify-content: left;
+  font-weight: bold;
+  margin-top: 2vh;
+  color: red;
+}
