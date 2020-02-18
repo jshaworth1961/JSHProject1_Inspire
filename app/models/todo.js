@@ -1,3 +1,4 @@
+//todo.js
 import { generateId } from "../utils.js";
 
 
@@ -9,6 +10,12 @@ export default class TaskTodo
         this.completed = data.completed;
         this.user = data.user;
         this.description =  data.description;
+
+
+        
+    
+
+        
         
     }
 
@@ -24,7 +31,7 @@ export default class TaskTodo
 				<div class="col-12 col-md-3">
                     <p>
                         <label>Completed?  </label>
-                        <input id = '${this._id}' onclick = "app.todoController.updateCheckboxStatus('${this._id}',${this.completed})" type = "checkbox">
+                        <input ${this.completed ? "checked":""} onclick = "app.todoController.updateCheckboxStatus('${this._id}',event)" type = "checkbox">
                     </p>
 				</div>
 				<div class="col-12 col-md-3">

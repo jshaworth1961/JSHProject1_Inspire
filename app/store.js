@@ -1,3 +1,4 @@
+//store.js
 import Weather from "./models/weather.js";
 
 let _state = {

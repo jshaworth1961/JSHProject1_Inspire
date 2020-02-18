@@ -69,45 +69,76 @@ deleteTodo(id)
   })
 }
 
-  updateCheckboxStatus(id,update)
+  updateCheckboxStatus(id,event)
   {
-    console.log(update);
+    event.preventDefault();
 
-    if (update === false) {
-      
-      update = true;
-      console.log(update);
-    }
-    else
-    {
-        update = false;
-        console.log(update);
-    }
+    let todo = _store.State.todos.find(t => t._id == id)
+    
+    todo.completed = !todo.completed
+    // let checkboxId = todo.checkboxId;
+    // console.log('checkboxId is ',checkboxId);
+
+    // console.log('in updateCheckboxStatus todo-service',id,update);
 
     
+    // if (update == false)
+    // {
+    //   update = true;
+    //   //document.getElementById(checkboxId).checked = true;
+    //   todo.completed = true;
+    // }
+    // else
+    // {
+    //   update = false;
+    //   //document.getElementById(checkboxId).checked = false;
+    //   todo.completed = false;
+    // }
+    
+
+    // console.log('UPDATE IS NOW',update);
 
     _todoApi
-    .put(id,update)
+    .put(id,todo)
     .then(res =>
     {
-      let todo = _store.State.todos.find(t => t._id == id);
-      console.log('in updateCheckboxStatus in todo-controller',todo);
-      todo.completed = update;
-      console.log(todo.completed)
+      // let todos = _store.State.todos;
+      // let todo = _store.State.todos.find(t => t._id == id);
+      // //console.log('in updateCheckboxStatus in todo-controller',todo);
+      // todo.completed = update;
+      // console.log('todo.completed is',todo.completed);
+
+      // todos.forEach(t=>
+      // {
+      //   if(t == t._id)
+      //   {
+      //     t.completed = update;
+          _store.commit("todos",_store.State.todos);
+      //   }
+      // })
       
+      /*
       for(let prop in update)
       {
-        console.log(prop);
-        todo[prop] = update[prop];
+        console.log('in prop')
+        console.log('the prop is ',prop);
+        todo[prop] = comp[prop];
+        _store.commit("todos", _store.State.todos);
       }
+      */
 
-      _store.commit("todos", _store.State.todos);
+      console.log('_store.State.todos',_store.State.todos)
+      
       
     })
     .catch(error =>
     {
       console.error(error);
     });
+
+   
+
+    
 
     
 

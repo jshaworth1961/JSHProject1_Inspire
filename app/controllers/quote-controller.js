@@ -1,4 +1,5 @@
-import _quoteService from "../services/quote-service.js";
+//quotecontroller.js
+import  _quoteService from "../services/quote-service.js";
 import _store from "../store.js"
 
 //TODO Create methods for constructor, and rendering the quote to the page

@@ -1,9 +1,11 @@
+//todo-controller.js
 import _todoService from "../services/todo-service.js";
 import _store from "../store.js";
 
 //TODO Create the render function
 function _drawTodos() {
   let todoCount = 0;
+
   console.log("You are in todo-controller _drawTodos()")
 
   let todos = _store.State.todos;
@@ -16,9 +18,8 @@ function _drawTodos() {
 
   todos.forEach(t => {
 
-    let ID = t._id.toString();
-    console.log('ID is ', ID);
-    console.log('t.completed is ', t.completed)
+    let ID = t.checkboxId
+    console.log
     
     //document.getElementById(ID).checked = t.completed;
   
@@ -29,11 +30,11 @@ function _drawTodos() {
 
   })
 
-  //console.log(str);
+  console.log(str);
   console.log("todoCount is ", todoCount)
 
   listTodos.innerHTML = str;
-  todoCountOutput.value = todoCount.toString();
+  todoCountOutput.value = todoCount;
 
 
 
@@ -43,8 +44,11 @@ export default class TodoController {
   constructor() {
     //TODO Remember to register your subscribers
     console.log("You are in the TodControllers constructor")
-    _store.subscribe("todos", _drawTodos)
+    _store.subscribe("todos", _drawTodos);
     this.getTodos();
+
+    let todoCount = 0;
+
 
   }
 
@@ -89,12 +93,12 @@ export default class TodoController {
 
   }
 
-  updateCheckboxStatus(id,completed)
+  updateCheckboxStatus(id,event)
   {
 
-    console.log('in todo-controller updateCheckboxStatus',completed);
-
-    _todoService.updateCheckboxStatus(id,completed);
+    console.log('in todo-controller updateCheckboxStatus',id,event);
+ 
+    _todoService.updateCheckboxStatus(id,event);
   }
 
   //NOTE This method will pass an Id to your service for the TODO that will need to be toggled

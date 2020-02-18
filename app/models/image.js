@@ -1,3 +1,4 @@
+//image.js
 export default class Image {
     constructor(data) {
         console.log('[ImageData]', data);
@@ -6,18 +7,16 @@ export default class Image {
         this.url = data.large_url;
 
 
-        if(data.large_url == null)
-        {
+        if (data.large_url == null || data.large_url == "") {
             this.url = "http://2.bp.blogspot.com/-R-peX4VsSwQ/UfjcNjtorDI/AAAAAAAAA08/5bpD3hTX9Zc/s1600/Tazmania-Cartoon-Characters-Wallpaper.jpg"
         }
-        
-        
+
+
     }
 
 
 
-    get ImageTemplate()
-    {
+    get ImageTemplate() {
 
         return `${this.url}`
 

@@ -1,4 +1,4 @@
-//weathercontroller.js
+//weather-controller.js
 import _weatherService from "../services/weather-service.js";
 import _store from "../store.js";
 

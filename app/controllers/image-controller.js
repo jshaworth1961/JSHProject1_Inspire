@@ -1,3 +1,4 @@
+//image-controller.js
 import _imageService from "../services/image-service.js";
 import _store from "../store.js"
 
